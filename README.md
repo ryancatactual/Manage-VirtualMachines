@@ -12,7 +12,7 @@
 
 Manage-VirtualMachines -Create -VMType DC -StartMachines -NetworkMod -File 'Actual filepath of CSV being used'
   
-  Next, we would copy a PowerShell script to each server used to configure each student's domain (all are unique) and run it. This setups up the domain, forest, creates users/groups/computers, and allows all further Windows workstations to be deployed and automatically domain joined. A copy of this script isn't here, but I can provide it too. There are many examples on the internet of the same task. 'DCSetup' will copy and execute the script copied to the VM and'ScriptLoc' is the filepath to the script on the local machine. The other values are the same.
+  Next, we would copy a PowerShell script to each server used to configure each student's domain (all are unique) and run it. This sets up the domain, forest, creates users/groups/computers, and allows all further Windows workstations to be deployed and automatically be domain joined. A copy of this script isn't here, but I can provide it too. There are many examples on the internet of the same task. 'DCSetup' will copy and execute the script copied to the VM and'ScriptLoc' is the filepath to the script on the local machine. The other values are the same.
 
 Manage-VirtualMachines -VMType DC -DCSetup -ScriptLoc 'Actual filepath to PowerShell script' -File 'Actual filepath of CSV being used'
 
